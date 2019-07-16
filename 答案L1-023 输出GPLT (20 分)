@@ -1,0 +1,60 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	string s1;
+	cin >> s1;
+	int G_num = 0;
+	int P_num = 0;
+	int L_num = 0;
+	int T_num = 0;
+	for (int i=0;i<s1.length();i++)
+	{	
+		char c;
+		c = s1[i];
+		if (c == 'G'||c=='g')
+		{
+			G_num++;
+		}
+		else if (c == 'P'||c=='p')
+		{
+			P_num++;
+		}
+		else if(c=='L'||c=='l')
+		{
+			L_num++;
+		}
+		else if (c == 'T' || c == 't')
+		{
+			T_num++;
+		}
+	}
+	while (G_num || P_num || L_num||T_num)
+	{
+		if (G_num)
+		{
+			cout << 'G';
+			G_num--;
+		}
+		if (P_num)
+		{
+			cout << 'P';
+			P_num--;
+		}
+		if (L_num)
+		{	
+
+			cout << 'L';
+			L_num--;
+		}
+		if (T_num)
+		{
+			cout << 'T';
+			T_num--;
+		}
+		
+	}
+	
+
+}
