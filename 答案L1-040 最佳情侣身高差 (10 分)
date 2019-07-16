@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int N;
+	char c;
+	double num;
+	cin >> N;
+	while (N--)
+	{
+		cin >> c >> num;
+		if (c == 'M')
+		{
+			printf("%.2lf\n", num / 1.09);
+		}
+		else
+		{
+			printf("%.2lf\n", num*1.09);
+		}
+	}
+    return 0;
+}
