@@ -1,0 +1,35 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class Student
+{
+public:
+	int sex;
+	string name;
+
+};
+int main()
+{
+	int num;
+	cin >> num;
+	Student student[50];
+	for (int i = 0; i < num; i++)
+	{
+		cin >> student[i].sex;
+		cin >> student[i].name;
+	}
+	for (int i = 0; i < (num+1)/2; i++)
+	{
+		cout << student[i].name;
+		for (int j = num - 1; j >= (num+1)/2; j--)
+		{
+			if ((student[i].sex != student[j].sex)&&(student[j].sex!=-1))
+			{
+				cout << " " << student[j].name << endl;
+				student[j].sex = -1;
+				break;
+			}
+			
+		}
+	}
+}
