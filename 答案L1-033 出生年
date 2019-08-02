@@ -1,0 +1,43 @@
+#include<iostream>
+#include<iomanip>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	int num, year=0, dif,cont=1,SORT[4];
+	cin >> num >> dif;
+	while(1)
+	{
+		int num_qian, num_bai, num_shi, num_ge;
+		num_qian = num / 1000;
+		num_bai = (num % 1000) / 100;
+		num_shi = (num % 100) / 10;
+		num_ge = num % 10;
+		SORT[0] = num_qian;
+		SORT[1] = num_bai;
+		SORT[2] = num_shi;
+		SORT[3] = num_ge;
+		sort(SORT, SORT + 4);
+		for (int i = 0; i < 3; i++)
+		{
+			if (SORT[i] == SORT[i + 1])
+			{
+
+			}
+			else
+			{
+				cont++;
+			}
+		}
+		if (cont == dif)
+		{
+			cout << year << " ";
+			cout << setfill('0') << setw(4) << num << endl;
+			break;
+		}
+		year++;
+		num++;
+		cont = 1;
+
+	}
+}
